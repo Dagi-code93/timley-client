@@ -25,7 +25,7 @@ const Add = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsLoading(true);
-        const response = await fetch("/goals", {
+        const response = await fetch("https://timely-mern.herokuapp.com/goals", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

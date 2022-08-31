@@ -12,7 +12,7 @@ const Profile = () => {
         setIsLoading(true);
         const file = e.target.files[0];
         const base64 = await convertToBase64(file);
-        const response = await fetch("/users/profilePic", {
+        const response = await fetch("https://timely-mern.herokuapp.com/users/profilePic", {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",

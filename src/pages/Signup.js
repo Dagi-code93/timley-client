@@ -20,7 +20,7 @@ const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsLoading(true);
-        const response = await fetch("/users/signup", {
+        const response = await fetch("https://timely-mern.herokuapp.com/users/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

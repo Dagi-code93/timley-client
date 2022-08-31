@@ -27,7 +27,7 @@ const Edit = () => {
     useEffect(() => {
         setIsLoading(true);
         const fetchGoal = async () => {
-            const response = await fetch(`/goals/${id}`, {
+            const response = await fetch(`https://timely-mern.herokuapp.com/goals/${id}`, {
                 headers: {
                     "Authorization": `Bearer ${user.token}`
                 }
@@ -51,7 +51,7 @@ const Edit = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setFormIsLoading(true);
-        const response = await fetch(`/goals/${goal._id}`, {
+        const response = await fetch(`https://timely-mern.herokuapp.com/goals/${goal._id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",

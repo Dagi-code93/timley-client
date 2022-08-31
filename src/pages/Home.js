@@ -8,7 +8,7 @@ const Home = () => {
     const navigate = useNavigate();
     useEffect(() => {
         const fetchdata = async () => {
-            const response = await fetch("/users/numberofusers");
+            const response = await fetch("https://timely-mern.herokuapp.com/users/numberofusers");
             const json = await response.json();
             setNumberOfUsers(json);
         }

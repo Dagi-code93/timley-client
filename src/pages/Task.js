@@ -30,7 +30,7 @@ const Task = () => {
     useEffect(() => {
         setIsLoading(true);
         const fetchGoal = async () => {
-            const response = await fetch(`/goals/${id}`, {
+            const response = await fetch(`https://timely-mern.herokuapp.com/goals/${id}`, {
                 headers: {
                     "Authorization": `Bearer ${user.token}`
                 }
@@ -86,7 +86,7 @@ const Task = () => {
     const redirectEdit = () => navigate(`/goals/${goal._id}/edit`);
 
     const handleDelete = async () => {
-        const response = await fetch(`/goals/${goal._id}`, {
+        const response = await fetch(`https://timely-mern.herokuapp.com/goals/${goal._id}`, {
             method: "DELETE",
             headers: {
                 "Authorization": `Bearer ${user?.token}`

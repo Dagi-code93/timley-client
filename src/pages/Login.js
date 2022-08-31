@@ -20,7 +20,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsLoading(true);
-        const response = await fetch("/users/login", {
+        const response = await fetch("https://timely-mern.herokuapp.com/users/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

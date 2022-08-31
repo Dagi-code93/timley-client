@@ -22,7 +22,7 @@ const Tasks = () => {
 
     useEffect(() => {
         const fetchGoals = async () => {
-          const response = await fetch("/goals/", {
+          const response = await fetch("https://timely-mern.herokuapp.com/goals/", {
             headers: {
               "Authorization": `Bearer ${user?.token}`
             }
